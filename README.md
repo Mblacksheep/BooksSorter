@@ -11,3 +11,26 @@ Foi levado em consideração a criação de um serviço REST em php para a elabo
 Esta ferramenta depende apenas de um servidor web. Será descrito as estapas da instalação de um servidor Apache, no SO Ubuntu.
 
 ### Como instalar
+
+#### Instale o servidor apache
+
+````
+sudo apt install apache2
+````
+
+#### Instale o git
+
+````
+sudo apt install git
+````
+
+#### Clone o projeto dentro da pasta /etc/www/html
+
+````
+sudo git clone https://github.com/Mblacksheep/BooksSorter.git
+````
+#### Agora acesse a aplicação no seu navegador
+
+````
+localhost/BooksSorter/
+````
