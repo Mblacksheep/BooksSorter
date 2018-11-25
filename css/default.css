@@ -1,0 +1,27 @@
+.sort-order:after {
+  content: '\25b2';
+}
+
+.sort-order.reverse:after {
+  content: '\25bc';
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.uib-datepicker-popup .uib-button-bar{
+    display: none !important;
+}
+
+.navbar {
+	border-bottom: #d60404 solid 1px;
+}
+
+.navbar-brand {
+	height: 100px;
+}
+
+.navbar-brand img {
+	max-height: 100%;
+}

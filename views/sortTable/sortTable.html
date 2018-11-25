@@ -1,0 +1,39 @@
+<div id="sortTable" class="container">
+    <div class="row">
+        <div class="col-md-offset-10 col-md-2 text-right">
+            <button class="btn btn-danger" type="button" ng-click="openModalInsertBoook()"> Insert Book</button>
+        </div>
+    </div>
+    <div class="row">  
+        <div class="col-md-12">
+            <table class="table table-striped responsive" id="sortTable" ng-class="{ 'hidden' : bookList.length == undefined }">
+                <thead>
+                    <tr>
+                        <th scope="col" class="cursor-pointer" ng-click="setTitleSort()">
+                            Title
+                            <span class="sort-order" ng-show="sortTitle != null" ng-class="{ 'reverse': sortTitle == '-title' }"></span>
+                        </th>
+                        <th scope="col" class="cursor-pointer" ng-click="setAuthorSort()">
+                            Author
+                            <span class="sort-order" ng-show="sortAuthor != null" ng-class="{ 'reverse': sortAuthor == '-author' }"></span>
+                        </th>
+                        <th scope="col" class="cursor-pointer" ng-click="setEditionYearSort()">
+                            Edition Year
+                            <span class="sort-order" ng-show="sortEditionYear != null" ng-class="{ 'reverse': sortEditionYear == '-editionYear' }"></span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="book in bookList | orderBy:listOrder">
+                        <td>{{ book.title }}</td>
+                        <td>{{ book.author }}</td>
+                        <td>{{ book.editionYear }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col-md-offset-3 col-md-6 text-center" ng-class="{ 'hidden' : bookList.length != 0 }">
+        <h4>No book registered</h4>
+    </div>
+</div>
