@@ -97,8 +97,12 @@ angular.module('sortTable.sortTable', [])
 .controller('ModalInsertBookCtrl', function($scope, $uibModalInstance) {
 
 	$scope.insertBook = function() {
-		$scope.book.editionYear = $scope.book.editionYear.getUTCFullYear();
-		$uibModalInstance.close($scope.book);
+		if(typeof ($scope.book.editionYear) == 'object') {
+			$scope.book.editionYear = $scope.book.editionYear.getUTCFullYear();
+			$uibModalInstance.close($scope.book);
+		} else {
+			swal("Atention", "Edition Year must be an Year!", "warning");
+		}
 	};
 
 	$scope.closeInsertBook = function() {
