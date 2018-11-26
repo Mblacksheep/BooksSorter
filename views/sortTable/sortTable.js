@@ -13,25 +13,25 @@ angular.module('sortTable.sortTable', [])
 			id: '1',
 			title: 'Java How to Program',
 			author: 'Deitel & Deitel',
-			editionYear: '2007'
+			editionYear: new Date('2007', '1', '1')
 		},
 		{   
 			id: '2', 
 			title: 'Patterns of Enterprise Application Architeture',
 			author: 'Martin Fowler',
-			editionYear: '2002'
+			editionYear: new Date('2002', '1', '1')
 		},
 		{   
 			id: '3',
 			title: 'Head First Design Patterns',
 			author: 'Elisabeth Freeman',
-			editionYear: '2004'
+			editionYear: new Date('2004', '1', '1')
 		},
 		{   
 			id: '4', 
 			title: 'Internet & World Wide Web: How to Program',
 			author: 'Deitel & Deitel',
-			editionYear: '2007'
+			editionYear: new Date('2007', '1', '1')
 		}
 	];
 
@@ -102,7 +102,7 @@ angular.module('sortTable.sortTable', [])
 
 	$scope.insertBook = function() {
 		if(typeof ($scope.book.editionYear) == 'object') {
-			$scope.book.editionYear = $scope.book.editionYear.getUTCFullYear();
+			// $scope.book.editionYear = $scope.book.editionYear.getUTCFullYear();
 			$uibModalInstance.close($scope.book);
 		} else {
 			swal("Atention", "Edition Year must be an Year!", "warning");

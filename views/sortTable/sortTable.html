@@ -27,7 +27,7 @@
                     <tr ng-repeat="book in bookList | orderBy:listOrder">
                         <td>{{ book.title }}</td>
                         <td>{{ book.author }}</td>
-                        <td>{{ book.editionYear }}</td>
+                        <td>{{ book.editionYear | date : 'yyyy' }}</td>
                     </tr>
                 </tbody>
             </table>
