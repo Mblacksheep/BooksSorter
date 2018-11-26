@@ -9,22 +9,26 @@ angular.module('sortTable.sortTable', [])
 	$scope.listOrder = [null, null, null];
 
 	$scope.bookList = [
-		{   id: '1',
+		{   
+			id: '1',
 			title: 'Java How to Program',
 			author: 'Deitel & Deitel',
 			editionYear: '2007'
 		},
-		{   id: '2', 
+		{   
+			id: '2', 
 			title: 'Patterns of Enterprise Application Architeture',
 			author: 'Martin Fowler',
 			editionYear: '2002'
 		},
-		{   id: '3',
+		{   
+			id: '3',
 			title: 'Head First Design Patterns',
 			author: 'Elisabeth Freeman',
 			editionYear: '2004'
 		},
-		{   id: '4', 
+		{   
+			id: '4', 
 			title: 'Internet & World Wide Web: How to Program',
 			author: 'Deitel & Deitel',
 			editionYear: '2007'
